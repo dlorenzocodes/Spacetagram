@@ -1,13 +1,13 @@
 import { PhotoProvider } from './context/PhotoContext'
 import Title from './components/Title'
-import SpaceImage from './components/SpaceImage'
+import ImageResults from './components/ImageResults'
 
 const App = () => {
     return (
         <PhotoProvider>
             <main className='main-container'>
                 <Title />
-                <SpaceImage />
+                <ImageResults />
             </main>
         </PhotoProvider>
     )

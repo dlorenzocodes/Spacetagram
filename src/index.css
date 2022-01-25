@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&family=Roboto&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::before,
 *::after{
@@ -18,12 +22,14 @@ a{
     text-decoration: none;
 }
 
-h1{
+.title{
     font-family: 'Lemon', cursive;
+    font-size: 2.125rem;
     color: #160CA1;
 }
 
-button{
+
+.btn{
     border: none;
     padding: 0.75rem 1.75rem;
     background-color: #FFDFE6;
@@ -40,8 +46,11 @@ button:hover{
 
 .main-container{
     background-color: #F5FCFF;
-    height: 100vh;
+}
+
+.wrapper{
     overflow: hidden;
+    height: 49vh;
 }
 
 .space-img{
@@ -49,8 +58,8 @@ button:hover{
     transition: visibility 300ms ease-in;
 }
 
-.space-img.hidde img{
-    visibility: hidden;
+.space-img img{
+    max-width: none;
 }
 
 .title-wrapper{

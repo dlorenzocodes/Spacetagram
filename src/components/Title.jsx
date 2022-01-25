@@ -15,7 +15,7 @@ function Title() {
 
     return (
         <div className={styles}>
-            <h1>Spacestagram</h1>
+            <h1 className='title'>Spacestagram</h1>
             <p>Ready to see images gathered by NASA's Curiosity, 
             Opportunity, and Spirit rovers on Mars ?</p>
             <Button handleBtnClick={handleClick} type='button'>Let's Go</Button>

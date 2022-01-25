@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { PhotoProvider } from './context/PhotoContext'
+import Title from './components/Title'
+import SpaceImage from './components/SpaceImage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <PhotoProvider>
+            <main className='main-container'>
+                <Title />
+                <SpaceImage />
+            </main>
+        </PhotoProvider>
+    )
 }
 
-export default App;
+export default App

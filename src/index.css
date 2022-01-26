@@ -22,6 +22,16 @@ a{
     text-decoration: none;
 }
 
+h3{
+    color: #160CA1;
+    font-size: 0.8rem;
+}
+
+label > svg{
+    fill: #FF6584;
+    transition: fill 300ms ease-in-out;
+}
+
 .title{
     font-family: 'Lemon', cursive;
     font-size: 2.125rem;
@@ -85,4 +95,23 @@ button:hover{
 
 .title-wrapper.slide{
     padding-top: 2rem;
+}
+
+.img-wrapper{
+    padding-bottom: 2.5rem;
+}
+
+.like-btn-wrapper{
+    position: relative;
+}
+
+input[type='checkbox']{
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+label{
+    cursor: pointer;
 }

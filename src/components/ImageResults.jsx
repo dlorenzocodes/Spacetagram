@@ -10,7 +10,7 @@ function ImageResults() {
 
     if(photos.length !== 0){
         return (
-            <div className='px-10'>
+            <div className='px-10 img-wrapper'>
                 {photos.map((photo) => (
                     <ImageItem photo={photo} key={photo.id}/>
                 ))}

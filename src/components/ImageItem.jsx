@@ -8,14 +8,18 @@ function ImageItem({photo}) {
 
     const handleLike = (e) => {
         if(e.target.checked){
-            setlikeBtn(<RiHeart3Fill />)
+            setlikeBtn(<RiHeart3Fill className='grow-animation'/>)
         } else{
             setlikeBtn(<RiHeart3Line />)
         }
     }
 
     return (
-        <div className='card card-normal shadow-md mb-8'>
+        <motion.div className='card card-normal shadow-md mb-8'
+            initial={{opacity: 0, y: '100vh'}}
+            animate={{opacity: 1, y: '0'}}
+            transition={{delay: 0.5, type: 'tween', duration: 0.5}}
+        >
             <figure>
                 <img src={photo.img} alt='Nasa' />
             </figure>
@@ -27,7 +31,7 @@ function ImageItem({photo}) {
                 </div>
                 <h3 className='text-left'>Photo Taken: {photo.date}</h3>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

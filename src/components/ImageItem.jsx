@@ -15,10 +15,11 @@ function ImageItem({photo}) {
     }
 
     return (
-        <motion.div className='card card-normal shadow-md mb-8'
+        <motion.div className='card card-normal shadow-md mb-8 md:m-0'
             initial={{opacity: 0, y: '100vh'}}
             animate={{opacity: 1, y: '0'}}
             transition={{delay: 0.5, type: 'tween', duration: 0.5}}
+            whileHover={{scale: 1.05}}
         >
             <figure>
                 <img src={photo.img} alt='Nasa' />

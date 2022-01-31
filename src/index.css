@@ -66,22 +66,22 @@ button:hover{
 }
 
 .main-container{
+    background-image: url("assets/space-illustration.svg");
+    background-repeat: no-repeat;
     background-color: #F5FCFF;
+    height: 100vh;
+    background-position: 96% 353px;
+    background-size: 939px;
 }
 
-.wrapper{
-    overflow: hidden;
-    height: 49vh;
+.card{
+    justify-content: space-between;
 }
 
-.space-img{
-    transform: rotate(157deg);
-    transition: visibility 300ms ease-in;
+.card-body{
+   flex: none 
 }
 
-.space-img img{
-    max-width: none;
-}
 
 .title-wrapper{
     padding: 5rem 2.5rem;
@@ -110,6 +110,7 @@ button:hover{
 
 .img-wrapper{
     padding-bottom: 2.5rem;
+    background-color: #F5FCFF;
 }
 
 .like-btn-wrapper{

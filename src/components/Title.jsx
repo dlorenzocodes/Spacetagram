@@ -1,4 +1,4 @@
-import PhotoContext from '../context/PhotoContext'
+import PhotoContext from '../context/photos/PhotoContext'
 import { useContext } from 'react'
 import Button from './Button'
 

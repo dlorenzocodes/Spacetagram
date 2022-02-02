@@ -127,3 +127,27 @@ input[type='checkbox']{
 label{
     cursor: pointer;
 }
+
+/* Daisy UI Resets */
+
+.stat{
+    background-color: transparent;
+}
+
+.stat-title,
+.stat-desc{
+    opacity: 1;
+}
+
+.sticky{
+    position: fixed;
+    top: 110px;
+    width: 100%;
+    z-index: 1;
+    transition: top 300ms ease-in-out;
+}
+
+.sticky.scrolled{
+    top: 0;
+    background-color: #F5FCFF;
+}

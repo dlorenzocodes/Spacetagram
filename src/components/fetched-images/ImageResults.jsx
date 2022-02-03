@@ -1,7 +1,7 @@
-import PhotoContext from '../context/photos/PhotoContext'
+import PhotoContext from '../../context/photos/PhotoContext'
 import { useContext} from 'react'
 import ImageItem from './ImageItem'
-import Stats from './Stats'
+import Stats from '../layout/Stats'
 
 
 
@@ -14,7 +14,7 @@ function ImageResults() {
             <>
                 <Stats photos={photos}/>
                 <div className='img-wrapper grid md:grid-cols-2 lg:grid-cols-3 
-                    xl:grid-cols-3 md:gap-8 px-10 pt-2'>
+                    xl:grid-cols-3 md:gap-8 px-10 pt-24'>
                     {photos.map((photo) => (
                         <ImageItem photo={photo} key={photo.id}/>
                     ))}

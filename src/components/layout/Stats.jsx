@@ -1,5 +1,6 @@
+import {Link} from 'react-router-dom'
 import {useContext, useState} from 'react'
-import CheckedContext from '../context/checked/CheckedContext'
+import CheckedContext from '../../context/checked/CheckedContext'
 
 function Stats() {
 
@@ -26,8 +27,8 @@ function Stats() {
                     <div className='stat-title text-stone-900'>Likes:</div>
                     <div className="stat-desc text-stone-900 pl-2">{images.length}</div>
                 </div>
-                <button className='btn-outline p-3 rounded-lg text-sm 
-                text-stone-900' type='click'>Liked Photos</button>
+                <Link to='/likes'><button className='btn-outline p-3 rounded-lg text-sm 
+                text-stone-900' type='click'>Liked Photos</button></Link>
             </div>
         </div>
     )

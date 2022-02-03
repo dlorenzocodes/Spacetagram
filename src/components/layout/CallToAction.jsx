@@ -1,4 +1,5 @@
-import PhotoContext from '../context/photos/PhotoContext'
+import {Link} from 'react-router-dom'
+import PhotoContext from '../../context/photos/PhotoContext'
 import { useContext } from 'react'
 import Button from './Button'
 
@@ -15,10 +16,15 @@ function Title() {
 
     return (
         <div className={styles}>
-            <h1 className='title'>Spacestagram</h1>
             <p>Ready to see images gathered by NASA's Curiosity, 
             Opportunity, and Spirit rovers on Mars ?</p>
-            <Button handleBtnClick={handleClick} type='button'>Let's Go</Button>
+            <Link to='/search'>
+                <Button 
+                    handleBtnClick={handleClick} 
+                    type='button'>
+                        Let's Go
+                </Button>
+            </Link>
         </div>
     )
 }

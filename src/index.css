@@ -42,11 +42,17 @@ svg{
     100% {transform: scale(1);}
 }
 
+.headline{
+    background-color: #F5FCFF;
+    padding-top: 4rem;
+}
+
 
 .title{
     font-family: 'Lemon', cursive;
     font-size: 2.125rem;
     color: #160CA1;
+    text-align: center;
 }
 
 
@@ -66,12 +72,17 @@ button:hover{
 }
 
 .main-container{
+    background-color: #F5FCFF;
+    height: 100vh;
+}
+
+.main-wrapper{
     background-image: url("assets/space-illustration.svg");
     background-repeat: no-repeat;
     background-color: #F5FCFF;
     height: 100vh;
-    background-position: 96% 353px;
-    background-size: 939px;
+    background-position: 96% 208px;
+    background-size: 1124px;
 }
 
 .card{
@@ -84,7 +95,7 @@ button:hover{
 
 
 .title-wrapper{
-    padding: 5rem 2.5rem;
+    padding: 0 2.5rem;
     text-align: center;
     transition: padding 300ms ease-in;
 }
@@ -96,7 +107,7 @@ button:hover{
     line-height: 1.25rem;
 }
 
-.title-wrapper.hidde p{
+/* .title-wrapper.hidde p{
     display: none;
 }
 
@@ -106,7 +117,7 @@ button:hover{
 
 .title-wrapper.slide{
     padding-top: 2rem;
-}
+} */
 
 .img-wrapper{
     padding-bottom: 2.5rem;
@@ -144,6 +155,7 @@ label{
     top: 110px;
     width: 100%;
     z-index: 1;
+    margin-top: 2rem;
     transition: top 300ms ease-in-out;
 }
 

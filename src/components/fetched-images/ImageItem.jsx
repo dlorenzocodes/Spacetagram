@@ -1,7 +1,7 @@
 import {RiHeart3Line, RiHeart3Fill} from 'react-icons/ri'
 import {useState, useContext} from 'react'
 import {motion} from 'framer-motion'
-import CheckedContext from '../context/checked/CheckedContext'
+import CheckedContext from '../../context/checked/CheckedContext'
 
 
 function ImageItem({photo}) {

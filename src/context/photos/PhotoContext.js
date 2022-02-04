@@ -13,9 +13,14 @@ export const PhotoProvider = ({children}) => {
         setPhotos(data)
     }
 
+    const clearFetchedPhotos = () => {
+        setPhotos([])
+    }
+
     return <PhotoContext.Provider value = {{
         photos,
-        fetchPhotos
+        fetchPhotos,
+        clearFetchedPhotos
     }}>
         {children}
     </PhotoContext.Provider>

@@ -149,3 +149,7 @@ label{
     top: -33px;
     background-color: #F5FCFF;
 }
+
+#no-likes-page{
+    flex-direction: column;
+}

@@ -11,6 +11,7 @@ function Stats() {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
+
         return () => {
             isMounted.current = false
         }
@@ -18,7 +19,9 @@ function Stats() {
 
     const handleScroll = () => {
         if(window.scrollY >= 60){
-            setStyles(true)
+            if(isMounted.current){
+                setStyles(true)
+            }
         }else{
             if(isMounted.current){
                 setStyles(false)

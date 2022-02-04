@@ -15,11 +15,15 @@ export const CheckedProvider = ({children}) => {
         setImages([...imgs])
     }
 
+    const clearLikedImages = () => {
+        setImages([])
+    }
 
     return <CheckedContext.Provider value={{
         images,
         getLikedPhotos,
-        removeUnlikedPhoto
+        removeUnlikedPhoto,
+        clearLikedImages
     }}>
         {children}
     </CheckedContext.Provider>

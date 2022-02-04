@@ -1,6 +1,21 @@
-# Getting Started with Create React App
+# App Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React App - Spacetagram
+
+## Description
+
+This app fetches data from the NASA API and dislpays the images as cards.
+Each card contains an image, the date the photo was taken and like button. It also tracks the number of images liked and saves them to the '/likes' route which can be access by clicking on liked images button. 
+
+This a simple app with the purpose to practice React concepts like the use of hooks, context, etc. 
+
+## Technologies
+
+    React
+    Node
+    Express
+    Tailwind CSS
+    daisyUI
 
 ## Available Scripts
 
@@ -39,32 +54,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### `npm sever`
+
+This is will fetch the data, organize it, and send to the front end.
+
+### `npm run dev`
+
+This will run the server and the front end at the same time. 

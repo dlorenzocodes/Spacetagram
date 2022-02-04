@@ -1,6 +1,18 @@
+import {useState} from 'react'
 import {motion} from 'framer-motion'
+import {RiHeart3Line, RiHeart3Fill} from 'react-icons/ri'
 
 function LikedImageItem({image}) {
+
+    const [likeBtn, setlikeBtn] = useState(<RiHeart3Fill />)
+
+    const handleLike = (e) => {
+        if(e.target.checked){
+            setlikeBtn(<RiHeart3Line className='grow-animation'/>)
+        } else{
+            setlikeBtn(<RiHeart3Fill />)
+        }
+    }
 
     return (
         <motion.div className='card card-normal shadow-md mb-8 md:m-0'
@@ -15,8 +27,8 @@ function LikedImageItem({image}) {
 
             <div className='card-body flex-row items-center justify-between'>
                 <div className='like-btn-wrapper'>
-                    <input type='checkbox' id={`likeBtn-${image.id}`}/>
-                    <label htmlFor={`likeBtn-${image.id}`}>Heart</label>
+                    <input onChange = {handleLike} type='checkbox' id={`likeBtn-${image.id}`}/>
+                    <label htmlFor={`likeBtn-${image.id}`}>{likeBtn}</label>
                 </div>
                 <h3 className='text-left'>Photo Taken: {image.date}</h3>
             </div>

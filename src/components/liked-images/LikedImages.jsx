@@ -18,7 +18,7 @@ function LikedImages() {
             </>
         )
     } else{
-        return null
+        return <h3>No Liked Images</h3>
     }
 }
 

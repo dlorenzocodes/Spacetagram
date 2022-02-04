@@ -34,29 +34,26 @@
 
 @media screen and (min-width: 1000px){
 
-    .main-container{
+    .home-wrapper{
         display: grid;
         grid-template-columns: 520px 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         background-position: -474px 90px;
         background-size: 1069px;
+    }
+
+    .headline{
+        grid-column: 2/3;
+        align-self: end;
     }
 
     .img-wrapper{
         grid-column: 1/3;
         grid-row: 3/4;
-        padding-top: 2rem;
     }
 
     .title-wrapper{
         grid-column: 2/3;
-        grid-row: 2/3;
-    }
-
-    .title-wrapper.slide{
-        padding: 0;
-        padding-top: 2rem;
-        grid-column: 1/3;
     }
 
     .title-wrapper .title{
@@ -67,6 +64,11 @@
         padding: 2rem;
         font-size: 1rem;
         line-height: 1.7rem;
+    }
+
+    .back-home-btn{
+        grid-column: 1/3;
+        background-color: #F5FCFF
     }
 
 }

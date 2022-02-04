@@ -1,13 +1,17 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
+import CheckedContext from '../../context/checked/CheckedContext'
 import {motion} from 'framer-motion'
 import {RiHeart3Line, RiHeart3Fill} from 'react-icons/ri'
 
 function LikedImageItem({image}) {
 
+    const {removeUnlikedPhoto} = useContext(CheckedContext)
+
     const [likeBtn, setlikeBtn] = useState(<RiHeart3Fill />)
 
     const handleLike = (e) => {
         if(e.target.checked){
+            removeUnlikedPhoto(image)
             setlikeBtn(<RiHeart3Line className='grow-animation'/>)
         } else{
             setlikeBtn(<RiHeart3Fill />)

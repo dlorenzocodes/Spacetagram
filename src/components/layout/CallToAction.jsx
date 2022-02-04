@@ -3,7 +3,7 @@ import PhotoContext from '../../context/photos/PhotoContext'
 import { useContext } from 'react'
 import Button from './Button'
 
-function Title() {
+function CallToAction() {
 
     const {photos, fetchPhotos} = useContext(PhotoContext)
 
@@ -29,4 +29,4 @@ function Title() {
     )
 }
 
-export default Title
+export default CallToAction

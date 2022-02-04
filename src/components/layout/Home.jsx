@@ -1,11 +1,14 @@
-import Title from './CallToAction'
+import CallToAction from './CallToAction'
+import Title from './Title'
 
 function Home() {
     return (
-        <div className='main-wrapper'>
+        <div className='home-wrapper'>
             <Title />
+            <CallToAction />
         </div>
     )
+    
 }
 
 export default Home

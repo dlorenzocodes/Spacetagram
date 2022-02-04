@@ -1,4 +1,6 @@
+
 function Title() {
+
     return (
         <div className='headline'>
             <h1 className='title'>Spacestagram</h1>

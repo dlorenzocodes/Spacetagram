@@ -1,22 +1,11 @@
-import {useState, useContext} from 'react'
-import CheckedContext from '../../context/checked/CheckedContext'
-import {motion} from 'framer-motion'
-import {RiHeart3Line, RiHeart3Fill} from 'react-icons/ri'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { RiHeart3Fill } from 'react-icons/ri'
 
-function LikedImageItem({image}) {
 
-    const {removeUnlikedPhoto} = useContext(CheckedContext)
+function LikedImageItem({image, onDelete}) {
 
-    const [likeBtn, setlikeBtn] = useState(<RiHeart3Fill />)
-
-    const handleLike = (e) => {
-        if(e.target.checked){
-            removeUnlikedPhoto(image)
-            setlikeBtn(<RiHeart3Line className='grow-animation'/>)
-        } else{
-            setlikeBtn(<RiHeart3Fill />)
-        }
-    }
+    // const [likeBtn, setlikeBtn] = useState(<RiHeart3Fill />)
 
     return (
         <motion.div className='card card-normal shadow-md mb-8 md:m-0'
@@ -26,15 +15,15 @@ function LikedImageItem({image}) {
             whileHover={{scale: 1.05}}
         >
             <figure>
-                <img src={image.img} alt='Nasa' />
+                <img src={image.data.photo} alt='Nasa' />
             </figure>
 
             <div className='card-body flex-row items-center justify-between'>
                 <div className='like-btn-wrapper'>
-                    <input onChange = {handleLike} type='checkbox' id={`likeBtn-${image.id}`}/>
-                    <label htmlFor={`likeBtn-${image.id}`}>{likeBtn}</label>
+                    <input onClick = {() => onDelete(image.data.docID)} type='checkbox' id={`likeBtn-${image.id}`}/>
+                    <label htmlFor={`likeBtn-${image.id}`}>{<RiHeart3Fill />}</label>
                 </div>
-                <h3 className='text-left'>Photo Taken: {image.date}</h3>
+                <h3 className='text-left'>Photo Taken: {image.data.date}</h3>
             </div>
         </motion.div>
     )

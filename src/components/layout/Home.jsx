@@ -1,5 +1,5 @@
-import CallToAction from './CallToAction'
 import Title from './Title'
+import CallToAction from './CallToAction'
 
 function Home() {
     return (

@@ -1,21 +1,39 @@
-import {RiHeart3Line, RiHeart3Fill} from 'react-icons/ri'
-import {useState, useContext} from 'react'
+import {useState} from 'react'
 import {motion} from 'framer-motion'
-import CheckedContext from '../../context/checked/CheckedContext'
+import { toast } from 'react-toastify'
+import { getAuth } from 'firebase/auth'
+import { db } from '../../config/firebase.config'
+import {RiHeart3Line, RiHeart3Fill} from 'react-icons/ri'
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 
 
 function ImageItem({photo}) {
 
     const [likeBtn, setlikeBtn] = useState(<RiHeart3Line />)
 
-    const {getLikedPhotos, removeUnlikedPhoto} = useContext(CheckedContext)
+     // Save Liked Image To Firestore
+     const saveImageToDB = async(photo) => {
+        try{
+
+            const auth = getAuth()  
+            const imgData = {
+                photo: photo.img,
+                date: photo.date,
+                userRef: auth.currentUser.uid,
+                timeStamp: serverTimestamp()
+            }
+
+            await addDoc(collection(db, 'images'), imgData)
+        }catch(error){
+            toast.error('Something went wrong. Try again later!')
+        }
+    }
 
     const handleLike = (e) => {
         if(e.target.checked){
-            getLikedPhotos(photo)
+            saveImageToDB(photo)
             setlikeBtn(<RiHeart3Fill className='grow-animation'/>)
         } else{
-            removeUnlikedPhoto(photo)
             setlikeBtn(<RiHeart3Line />)
         }
     }

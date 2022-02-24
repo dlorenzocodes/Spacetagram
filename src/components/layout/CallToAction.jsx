@@ -1,7 +1,7 @@
+import Button from './Button'
+import { useContext } from 'react'
 import {Link} from 'react-router-dom'
 import PhotoContext from '../../context/photos/PhotoContext'
-import { useContext } from 'react'
-import Button from './Button'
 
 function CallToAction() {
 

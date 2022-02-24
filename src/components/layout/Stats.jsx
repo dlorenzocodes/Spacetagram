@@ -1,32 +1,28 @@
 import {Link} from 'react-router-dom'
-import {useContext, useState, useEffect,useRef} from 'react'
-import CheckedContext from '../../context/checked/CheckedContext'
+import {useState, useEffect, useRef} from 'react'
 
 function Stats() {
 
-    const {images} = useContext(CheckedContext)
     const [styles, setStyles] = useState(false)
 
     const isMounted = useRef(true)
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
+        if(isMounted){
+            window.addEventListener('scroll', handleScroll)
+        }
 
-        return () => {
-            isMounted.current = false
+
+        return () => { 
+            isMounted.current = false 
+            window.removeEventListener('scroll', handleScroll)
         }
     }, [isMounted])
 
+    
     const handleScroll = () => {
-        if(window.scrollY >= 60){
-            if(isMounted.current){
-                setStyles(true)
-            }
-        }else{
-            if(isMounted.current){
-                setStyles(false)
-            }
-        }
+        if(window.scrollY >= 60) return setStyles(true)
+        setStyles(false)
     }
    
     
@@ -34,8 +30,7 @@ function Stats() {
         <div className={styles ? 'px-10 mb-6 sticky scrolled' : 'px-10 mb-6 sticky'}>
             <div className="flex flex-row items-center justify-between">
                 <div className='stat flex flex-row items-center w-3/4  md:w-4/5'>
-                    <div className='stat-title text-stone-900'>Likes:</div>
-                    <div className="stat-desc text-stone-900 pl-2">{images.length}</div>
+                    <div className="stat-desc text-stone-900 pl-2">Wanna see your liked photos?</div>
                 </div>
                 <Link to='/likes'>
                     <button 
@@ -43,7 +38,7 @@ function Stats() {
                         rounded-lg text-sm text-stone-900' 
                         type='click'
                         >
-                            Liked Photos
+                            Click Here
                     </button>
                 </Link>
             </div>
